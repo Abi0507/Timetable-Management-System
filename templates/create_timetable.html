@@ -1,0 +1,58 @@
+<!-- templates/create_timetable.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+    <title>Create Timetable Entry</title>
+</head>
+<body>
+    <nav id="navbar">
+        <h1>TIMETABLE MANAGEMENT SYSTEM</h1>
+    </nav>
+    <h1>Create Timetable Entry</h1>
+   <div class="container">
+    
+    <form method="POST">
+        <label for="class_name">Class Name:</label>
+        <select name="class_name" required>
+            <option value="">--Select Class--</option>
+            <option value="class1">Class I</option>
+            <option value="class2">Class II</option>
+        </select><br>        
+
+        <label for="day">Day:</label>
+        <select name="day" required>
+            <option value="">--Select day--</option>
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+
+        </select><br>        
+
+        <label>Time:</label>
+        <input type="time" name="time" required><br>
+        
+        <label>Course:</label>
+        <select name="course" required>
+            <option value="">--Select Course--</option>
+            <option value="ds">Data Structures</option>
+            <option value="db">DBMS</option>
+            <option value="dm">Data Mining</option>
+            <option value="Maths">Maths</option>
+            <option value="mp">Microprocessor</option>
+        </select><br> 
+        
+        <label>Faculty:</label>
+        <input type="text" name="faculty" required><br>
+        
+        <button type="submit">Create</button>
+    </form>
+
+   </div>
+</body>
+</html>

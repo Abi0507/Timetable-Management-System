@@ -1,0 +1,29 @@
+<!-- templates/timetable_view.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+    <title>{{ class_name }} Timetable</title>
+</head>
+<body>
+    <h1>{{ class_name }} Timetable</h1>
+    <table border="1">
+        <tr>
+            <th>Day</th>
+            <th>Time</th>
+            <th>Course</th>
+            <th>Faculty</th>
+        </tr>
+        {% for entry in timetable %}
+        <tr>
+            <td>{{ entry['day'] }}</td>
+            <td>{{ entry['time'] }}</td>
+            <td>{{ entry['course'] }}</td>
+            <td>{{ entry['faculty'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!-- templates/student_dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+    <title>Student Dashboard</title>
+</head>
+<body>
+    <nav id="navbar">
+        <h1>TIMETABLE MANAGEMENT SYSTEM</h1>
+    </nav>
+    <h1>Student Dashboard</h1>
+    <h2>Select Your Class</h2>
+    <a href="/view_timetable/class1">Class I</a><br>
+    <a href="/view_timetable/class2">Class II</a><br>
+    <!-- Add more classes as needed -->
+</body>
+</html>
